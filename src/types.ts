@@ -23,3 +23,7 @@ export interface ImageModalProps {
 export interface SearchBarProps {
   onSubmit: (query: string) => void;
 }
+
+export interface ErrorMessageProps {
+  message: string;
+}

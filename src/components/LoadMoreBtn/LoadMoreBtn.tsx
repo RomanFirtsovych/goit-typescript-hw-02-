@@ -1,6 +1,11 @@
-import PropTypes from 'prop-types';import styles from './LoadMoreBtn.module.css';
+import PropTypes from 'prop-types';
+import styles from './LoadMoreBtn.module.css';
 
-const LoadMoreBtn = ({ onClick }) => {
+interface LoadMoreBtnProps {
+  onClick: () => void;
+}
+
+const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({ onClick }) => {
   return (
     <button onClick={onClick} className={styles.button}>
       Load more
@@ -9,7 +14,7 @@ const LoadMoreBtn = ({ onClick }) => {
 };
 
 LoadMoreBtn.propTypes = {
-  onClick: PropTypes.func.isRequired, 
+  onClick: PropTypes.func.isRequired,
 };
 
 export default LoadMoreBtn;
